@@ -14,33 +14,6 @@ composer require zaman-tech/vod-client-sdk
 
 1. The Package has too registered
 
-```php
-class AppServiceProvider extends ServiceProvider
-{
-    /**
-     * Bootstrap any application services.
-     */
-    public function boot()
-    {
-    }
-
-    /**
-     * Register any application services.
-     */
-    public function register()
-    {
-        $this->app->bind('arvan-vod-sdk', function ($app) {
-            return VodSdk::setToken('Apikey xxxxxxxxxxxx');
-        });
-    }
-}
-
-// SomeController.php
-
-$vodSdk = app('arvan-vod-sdk');
-
-```
-
 2. UserDomain:
 
 ```php
@@ -57,7 +30,13 @@ $userDomain = $vodkSdk->userDomain();
 $createdDomain = $userDomain->createDomain(['subdomain' => 'whatever']);
 
 // GET
-$getUserDomain = $userDomain->getDomain(); 
+$getUserDomain = $userDomain->getDomain();
+
+
+or
+
+$user_domain = new UserDomain();
+$user_domain->getDomain()
 ```
 
 3. Channel:
