@@ -1,6 +1,6 @@
 <?php
 
-namespace Arvan\Vod;
+namespace ZamanTech\Vod;
 
 final class HeaderSetup
 {

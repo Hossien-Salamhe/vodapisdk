@@ -1,16 +1,22 @@
 <?php
 
-namespace Arvan\Vod;
+namespace ZamanTech\Vod;
 
-use Arvan\Vod\Api\V2_0\Audio;
-use Arvan\Vod\Api\V2_0\Channel;
-use Arvan\Vod\Api\V2_0\File;
-use Arvan\Vod\Api\V2_0\Profile;
-use Arvan\Vod\Api\V2_0\Subtitle;
-use Arvan\Vod\Api\V2_0\UserDomain;
-use Arvan\Vod\Api\V2_0\Video;
-use Arvan\Vod\Api\V2_0\Watermark;
+use ZamanTech\Vod\Api\V2_0\Audio;
+use ZamanTech\Vod\Api\V2_0\Channel;
+use ZamanTech\Vod\Api\V2_0\File;
+use ZamanTech\Vod\Api\V2_0\Profile;
+use ZamanTech\Vod\Api\V2_0\Subtitle;
+use ZamanTech\Vod\Api\V2_0\UserDomain;
+use ZamanTech\Vod\Api\V2_0\Video;
+use ZamanTech\Vod\Api\V2_0\Watermark;
 
+
+/**
+ * VodSdk
+ * @property $channelApi
+ *
+ */
 final class VodSdk
 {
     public static $config;

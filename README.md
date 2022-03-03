@@ -3,7 +3,17 @@
 ### This package has written in pure php which can be implemented in any PHP framework.
 
 #### For more details please kindly take a look at the [API Doc](https://napi.arvancloud.com/docs/vod/2.0#/)
+
+### Installation
+
+Pull the package via composer.
+
+```shell
+composer require zaman-tech/vod-client-sdk
+```
+
 1. The Package has too registered
+
 ```php
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,6 +40,7 @@ class AppServiceProvider extends ServiceProvider
 $vodSdk = app('arvan-vod-sdk');
 
 ```
+
 2. UserDomain:
 
 ```php
@@ -48,6 +59,7 @@ $createdDomain = $userDomain->createDomain(['subdomain' => 'whatever']);
 // GET
 $getUserDomain = $userDomain->getDomain(); 
 ```
+
 3. Channel:
 
 ```php
@@ -83,6 +95,7 @@ $updatedChannel = $channel->update('5c6b18de-9763-423f-8d3e-f2e84e93c9d5', [
 // DELETE (delete a channel) 
 $channel->update('********-****-****-****-********');
 ```
+
 4. File:
 
 ```php
@@ -106,6 +119,7 @@ $fileOffset = $file->getOffset('https://napi.arvancloud.com/**************');
 // DELETE (by file ID)
 $file->delete('********-****-****-****-********');
 ```
+
 5. Video / Audio:
 
 ```php
@@ -161,6 +175,7 @@ $updatedVideo = $video->update('video_id', [
 // DELETE (by video / audio ID)
 $video->delete('********-****-****-****-********');
 ```
+
 6. Watermark:
 
 ```php
@@ -189,6 +204,7 @@ $updatedWatermark = $watermark->update([
 // DELETE (by watermark ID)
 $watermark->delete('********-****-****-****-********');  //WatermarkId
 ```
+
 7. Subtitle:
 
 ```php
@@ -210,6 +226,7 @@ $newSubtitle = $subtitle->create([
 // DELETE
 $subtitle->delete('********-****-****-****-********');  //SubtitleId
 ```
+
 8. Porfile:
 
 ```php

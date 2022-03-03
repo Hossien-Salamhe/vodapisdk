@@ -1,6 +1,6 @@
 <?php
 
-namespace Arvan\Vod;
+namespace ZamanTech\Vod;
 
 class Configuration
 {
@@ -9,7 +9,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'Arvan-Vod-API';
+    protected $userAgent = 'ZamanTech-Vod-API';
 
     /**
      * Associate array to store API key(s).
@@ -165,7 +165,7 @@ class Configuration
      */
     public static function toDebugReport()
     {
-        $report = 'PHP SDK (Arvan\Vod) Debug Report:'.PHP_EOL;
+        $report = 'PHP SDK (ZamanTech\Vod) Debug Report:'.PHP_EOL;
         $report .= '    OS: '.php_uname().PHP_EOL;
         $report .= '    PHP Version: '.PHP_VERSION.PHP_EOL;
         $report .= '    OpenAPI Spec Version: 2.0'.PHP_EOL;

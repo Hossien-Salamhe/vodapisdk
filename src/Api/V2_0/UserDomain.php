@@ -1,8 +1,8 @@
 <?php
 
-namespace Arvan\Vod\Api\V2_0;
+namespace ZamanTech\Vod\Api\V2_0;
 
-use Arvan\Vod\Config\Routes;
+use ZamanTech\Vod\Config\Routes;
 
 final class UserDomain extends BaseClass
 {

@@ -1,21 +1,32 @@
 {
-  "name": "arvan/vod-client-sdk",
-  "type": "library",
-  "description": "This is a client package to make your development process more faster.",
-  "authors": [{
-    "name": "Farshid Boroomand",
-    "email": "farshid@arvancloud.com"
-  }],
-  "minimum-stability": "stable",
-  "prefer-stable": true,
-  "require": {
-    "php": ">=7.1",
-    "guzzlehttp/guzzle": "^6.3",
-    "ankitpokhrel/tus-php": "^0.0.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Arvan\\Vod\\": "src/"
+    "name": "zaman-tech/vod-client-sdk",
+    "type": "library",
+    "description": "This is a client package to make your development process more faster.",
+    "authors": [
+        {
+            "name": "Hossien Salamhe",
+            "email": "hossien.salamhe@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "ankitpokhrel/tus-php": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "ZamanTech\\Vod\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ZamanTech\\Vod\\VodProvider"
+            ]
+        }
     }
-  }
 }

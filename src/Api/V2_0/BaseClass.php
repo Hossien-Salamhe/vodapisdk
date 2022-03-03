@@ -1,12 +1,13 @@
 <?php
 
-namespace Arvan\Vod\Api\V2_0;
+namespace ZamanTech\Vod\Api\V2_0;
 
-use Arvan\Vod\ApiException;
-use Arvan\Vod\Configuration;
-use Arvan\Vod\Extensions\CommonFunctions;
-use Arvan\Vod\HeaderSetup;
-use Arvan\Vod\ObjectSerializer;
+use GuzzleHttp\Psr7\Query;
+use ZamanTech\Vod\ApiException;
+use ZamanTech\Vod\Configuration;
+use ZamanTech\Vod\Extensions\CommonFunctions;
+use ZamanTech\Vod\HeaderSetup;
+use ZamanTech\Vod\ObjectSerializer;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
@@ -222,7 +223,7 @@ abstract class BaseClass
                 $httpBody = \GuzzleHttp\json_encode($formParams);
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -238,7 +239,7 @@ abstract class BaseClass
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = Query::build($queryParams);
 
         return new Request(
             $method,
@@ -265,8 +266,9 @@ abstract class BaseClass
 
     protected function queryStringBuilder($params)
     {
-        $query = \GuzzleHttp\Psr7\build_query($params);
+        $query = Query::build($params);
 
+//        dd($query);
         return $query;
     }
 

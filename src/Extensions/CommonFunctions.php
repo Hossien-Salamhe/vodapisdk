@@ -1,6 +1,6 @@
 <?php
 
-namespace Arvan\Vod\Extensions;
+namespace ZamanTech\Vod\Extensions;
 
 trait CommonFunctions
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Arvan\Vod;
+namespace ZamanTech\Vod;
 
 use Exception;
 
@@ -9,9 +9,9 @@ use Exception;
  *
  * @category Class
  *
- * @author   Arvan VOD Development Team
+ * @author   ZamanTech VOD Development Team
  *
- * @see     https://git.arvan.me/arvan/vod-php-sdk
+ * @see     https://git.ZamanTech.me/ZamanTech/vod-php-sdk
  */
 class ApiException extends Exception
 {

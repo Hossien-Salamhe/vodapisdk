@@ -1,6 +1,6 @@
 <?php
 
-namespace Arvan\Vod;
+namespace ZamanTech\Vod;
 
 class ObjectSerializer
 {
@@ -173,7 +173,7 @@ class ObjectSerializer
         } else {
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Arvan\VodSdk\\'.$data->{$discriminator};
+                $subclass = '\ZamanTech\VodSdk\\'.$data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

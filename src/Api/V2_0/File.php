@@ -1,11 +1,12 @@
 <?php
 
-namespace Arvan\Vod\Api\V2_0;
+namespace ZamanTech\Vod\Api\V2_0;
 
-use Arvan\Vod\ApiException;
-use Arvan\Vod\Config\Routes;
-use Arvan\Vod\Extensions\CommonFunctions;
-use Arvan\Vod\ObjectSerializer;
+use GuzzleHttp\Psr7\Query;
+use ZamanTech\Vod\ApiException;
+use ZamanTech\Vod\Config\Routes;
+use ZamanTech\Vod\Extensions\CommonFunctions;
+use ZamanTech\Vod\ObjectSerializer;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
@@ -128,7 +129,7 @@ final class File extends BaseClass
                 $httpBody = \GuzzleHttp\json_encode($formParams);
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -149,7 +150,7 @@ final class File extends BaseClass
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = Query::build($queryParams);
 
         return new Request(
             'HEAD',
@@ -267,7 +268,7 @@ final class File extends BaseClass
                 $httpBody = \GuzzleHttp\json_encode($formParams);
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+                $httpBody = Query::build($formParams);
             }
         } else {
             throw new \InvalidArgumentException(
@@ -294,7 +295,7 @@ final class File extends BaseClass
 
         $httpBody = fopen($this->fileInfo['realpath'], 'rb');
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = Query::build($queryParams);
 
         return new Request(
             'PATCH',
@@ -437,7 +438,7 @@ final class File extends BaseClass
                 $httpBody = \GuzzleHttp\json_encode($formParams);
             } else {
                 // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+                $httpBody = Query::build($formParams);
             }
         }
 
@@ -458,7 +459,7 @@ final class File extends BaseClass
             $headers
         );
 
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        $query = Query::build($queryParams);
 
         return new Request(
             'POST',
